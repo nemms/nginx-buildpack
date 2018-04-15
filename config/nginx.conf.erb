@@ -62,11 +62,12 @@ http {
       text/x-component;
     # text/html is always compressed by HttpGzipModule
 
+    include site.conf;
+
     server {
         server_name localhost;
         listen <%= ENV['PORT'] %>;
 
         charset utf-8;
-        include site.conf;
     }
 }
